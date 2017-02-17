@@ -15,7 +15,6 @@ class FormType(models.Model):
         return self.form_type_name
         
 
- 
 class FormRecordAttributeType(models.Model):
     record_type = models.CharField(max_length=50)
     form_type = models.ForeignKey(FormType, on_delete=models.CASCADE)
