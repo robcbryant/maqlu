@@ -1,0 +1,9 @@
+{% if all_projects_list %}
+    <ul>
+    {% for project in all_projects_list %}
+        <li><a href="/{{request.resolver_match.app_name}}/{{ project.id }}/">{{ project.project_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No projects are available.</p>
+{% endif %}
